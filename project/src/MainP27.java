@@ -152,6 +152,41 @@ public class MainP27 {
 
         System.out.println(count);
 
-        
+
+        //每一行都斜着往下
+        for (int i = 0;  i < 94; i++) {
+            for (int j = 0; j < 94; j++) {
+                StringBuilder stringBuilder = new StringBuilder();
+                for (int k = 0; k < 7; k++) {
+                    stringBuilder.append(chars[i+k][j+k]);
+                }
+                if (lan.contentEquals(stringBuilder)) {
+                    count++;
+                }
+                stringBuilder.reverse();
+                if (lan.contentEquals(stringBuilder)) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+
+        // 每一行都斜着往上
+        for (int i = 6; i < 100; i++) {
+            for (int j = 0; j <= 93; j++) { // 注意此处应为 <= 93，因为LANQIAO是7个字符
+                StringBuilder stringBuilder = new StringBuilder();
+                for (int k = 0; k < 7; k++) {
+                    stringBuilder.append(chars[i-k][j+k]); // 注意这里的索引顺序
+                }
+                if (lan.contentEquals(stringBuilder)) {
+                    count++;
+                }
+                stringBuilder.reverse();
+                if (lan.contentEquals(stringBuilder)) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
     }
 }
