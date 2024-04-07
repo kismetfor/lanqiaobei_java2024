@@ -177,9 +177,10 @@ public class MainP27 {
                 StringBuilder stringBuilder = new StringBuilder();
                 for (int k = 0; k < 7; k++) {
                     stringBuilder.append(chars[i-k][j+k]); // 注意这里的索引顺序
-			//之所以这样推导 是因为i-k， k>0 那么就会向上走
-//同理 j+k 往上走 
-//并且范围是i-6 》= 0.j+6《100
+                //之所以这样推导 是因为i-k， k>0 那么就会向上走
+                //同理 j+k 往上走
+                //并且范围是i-6 > = 0
+                // j+6 < 100
                 }
                 if (lan.contentEquals(stringBuilder)) {
                     count++;
