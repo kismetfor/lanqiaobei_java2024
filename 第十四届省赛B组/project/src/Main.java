@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
+//今天蓝桥杯 写出来第一题第二题第三题 就是不知道对不对 代码有没有提交上
+//明天开始看课 一天两道算法题
+		}
+    public static void main1(String[] args) {
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
         for (int z=0;z<t;z++){
